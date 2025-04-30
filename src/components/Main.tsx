@@ -17,7 +17,7 @@ function Main() {
             <a href="https://www.linkedin.com/in/romain-troillard-983840299/" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
           </div>
           <h1>TROILLARD Romain</h1>
-          <p>Full Stack Engineer</p>
+          <p>Data Science student (BSc)</p>
 
           <div className="mobile_social_icons">
             <a href="https://github.com/MrPaquiteau" target="_blank" rel="noreferrer"><GitHubIcon/></a>

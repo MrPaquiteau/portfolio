@@ -40,7 +40,7 @@ function Timeline() {
       iconBg: '#5000ca',
       company: "SKIS Rossignol",
       title: "Database Manager (Internship)",
-      location: "Saint Jean de Moirans, France",
+      location: "Saint-Jean-de-Moirans, France",
       details: `BUT 2nd year Internship<br /><br />- Data Management<br />- SQL Queries<br />- Python Scripting for Optimization`
     },
     {
@@ -69,7 +69,7 @@ function Timeline() {
 
 
   return (
-    <div id="history">
+    <div id="timeline">
       <div className="items-container">
         <h1>Timeline</h1>
         <VerticalTimeline>

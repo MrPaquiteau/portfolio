@@ -15,8 +15,7 @@ code {
 
 .main-container {
   position: relative;
-  background-color: #0d1116;
-
+  background-color: #0D1117;
 }
 
 a {
@@ -24,8 +23,17 @@ a {
 }
 
 a:hover {
-  color: #5000ca;
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+
+// LinkedIn icon hover color
+a[href*="linkedin.com"]:hover svg {
+  color: #0077b5;
+}
+
+// GitHub icon hover color
+a[href*="github.com"]:hover svg {
+  color: #5000ca;
 }
 
 p, a, h1, h2, h3, h4, h5, label, button {
@@ -35,7 +43,7 @@ p, a, h1, h2, h3, h4, h5, label, button {
 
 .navigation-bar {
   justify-content: space-between;
-  background-color: #0d1116;
+  background-color: #0D1117;
 
   button {
     font-size: 1.1rem;
@@ -51,7 +59,7 @@ p, a, h1, h2, h3, h4, h5, label, button {
 
 .navigation-bar-responsive {
   span, p {
-    color: #0d1116;
+    color: #0D1117;
     font-family: "Lato", sans-serif;
   }
 }
@@ -100,7 +108,7 @@ p, a, h1, h2, h3, h4, h5, label, button {
   }
 
   p, a, h1, h2, h3, h4, h5, label, button {
-    color: #0d1116;
+    color: #0D1117;
   }
 
   a:hover {
@@ -109,15 +117,11 @@ p, a, h1, h2, h3, h4, h5, label, button {
   }
 
   .navigation-bar svg {
-    color: #0d1116;
-  }
-
-  .about-section {
-    background-image: url("./assets/images/bg-light.png");
+    color: #0D1117;
   }
 
   .skills-container svg {
-    color: #0d1116;
+    color: #0D1117;
   }
 
   .chip {
@@ -142,7 +146,7 @@ p, a, h1, h2, h3, h4, h5, label, button {
   }
 
   .flex-chips .chip-title {
-    color: #0d1116;
+    color: #0D1117;
   }
 }
 
