@@ -8,8 +8,8 @@
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    padding: 0px 10% 0px 6%;
-    min-height: 700px;
+    padding: 0px 10% 0px 3%;
+    min-height: 100vh;
     background-image: url("../images/bg-main.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -52,7 +52,7 @@
 .about-section .image-wrapper {
     z-index: 2;
     img {
-        width: 275px;
+        width: 35vh;
     }
 }
 
@@ -64,24 +64,24 @@
 
 @media screen {
     @media (max-width: 567px) {
-        .nav-left{
+        .nav-left {
             padding-top: 20px;
-            float:left;
+            float: left;
         }
 
         .nav-left img {
-            height: 35px
+            height: 35px;
         }
 
         .nav-right {
-            float:right;
+            float: right;
         }
 
         .nav-right li {
             padding: 10px 15px;
-            list-style:none;
-            font-size:13px;
-            color:white;
+            list-style: none;
+            font-size: 13px;
+            color: white;
             width: 10%;
         }
 
@@ -100,9 +100,16 @@
             padding-right: 5%;
             font-size: 12px;
         }
+
+        .about-section {
+            min-height: 100vh;
+            padding-top: 100px;
+            padding-left: 3%;
+            padding-right: 5%;
+        }
     }
 
-    @media (max-width:768px) {
+    @media (max-width: 768px) {
         .about-section h1 {
             font-size: 4em !important;
             text-align: left;
@@ -126,17 +133,18 @@
             flex-direction: row;
             gap: 10px;
             color: white;
-    
+
             svg {
                 font-size: 1.8em;
             }
         }
 
         .about-section {
+            min-height: 100vh; // idem pour tablette
             padding-top: 150px;
             display: block;
-            padding-left: 0px;
-            padding-right: 0px;
+            padding-left: 3%; // rapprocher à gauche aussi sur tablette
+            padding-right: 5%;
         }
 
         .about-section .content {
