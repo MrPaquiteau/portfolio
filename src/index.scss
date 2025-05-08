@@ -130,7 +130,7 @@ p, a, h1, h2, h3, h4, h5, label, button {
   }
 
   .vertical-timeline::before {
-    background-color: rgba(0, 0, 0, 0.08);
+    background-color: rgba(0, 0, 0, 0.9);
   }
 
   .vertical-timeline--animate .vertical-timeline-element-content.bounce-in {
@@ -138,11 +138,35 @@ p, a, h1, h2, h3, h4, h5, label, button {
   }
 
   .vertical-timeline--two-columns .vertical-timeline-element-content .vertical-timeline-element-date {
-    color: gray;
+    color: rgb(0, 0, 0);
+  }
+
+  .vertical-timeline-element--work .vertical-timeline-element-content {
+    background: rgba(0, 0, 0, 0.9) !important;
+    color: #fff !important;
+
+    h3, h4, h5 {
+      color: #fff !important;
+    }
+    p {
+      color: rgba(255, 255, 255, 0.9) !important;
+    }
+  }
+
+  .vertical-timeline-element--education .vertical-timeline-element-content {
+    background: rgba(0, 0, 0, 0.9) !important;
+    color: #fff !important;
+
+    h3, h4, h5 {
+      color: #fff !important;
+    }
+    p {
+      color: rgba(255, 255, 255, 0.9)!important;
+    }
   }
 
   .vertical-timeline-element-content-arrow {
-    border-right: 7px solid rgba(0, 0, 0, 0.08) !important;
+    border-right: 7px solid rgba(0, 0, 0, 0.9) !important;
   }
 
   .flex-chips .chip-title {

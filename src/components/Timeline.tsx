@@ -41,7 +41,7 @@ function Timeline() {
       company: "SKIS Rossignol",
       title: "Database Manager (Internship)",
       location: "Saint-Jean-de-Moirans, France",
-      details: `BUT 2nd year Internship<br /><br />- Data Management<br />- SQL Queries<br />- Python Scripting for Optimization`
+      details: `BUT 2nd year Internship<br /><br />- Data Management<br />- SQL Queries<br />- Python Scripting for Optimization<br />- Developed an Excel tool using VBA for automation`
     },
     {
       index: 2,
@@ -52,7 +52,7 @@ function Timeline() {
       company: "IUT2 - Université Grenoble Alpes",
       title: "University Bachelor of Technology (BUT) Data Science",
       location: "Grenoble, France",
-      details: `- Data Science and Computer Science<br />- Data Analysis and Visualization<br />- Machine Learning and AI<br />- Database Management<br />- Programming in Python, SQL, R, JavaScript, HTML/CSS`
+      details: `- Data Science and Computer Science<br />- Programming in Python, SQL, R<br />- Machine Learning and AI<br />- Database Management<br />- Data Analysis and Visualization<br />- Web Development with JavaScript, HTML, CSS, PHP<br />- Big Data Technologies<br />- Project Management and Team Collaboration<br />`
     },
     {
       index: 3,
@@ -61,7 +61,7 @@ function Timeline() {
       icon: faGraduationCap,
       iconBg: '#007bff',
       company: "Lycée Marie Curie",
-      title: "High School Diploma",
+      title: "French Baccalauréat",
       location: "Échirolles, France",
       details: `Specialities<br /><br />- Numeric and Computer Science<br />- Mathematics<br />- Economy and Social Sciences`
     }
