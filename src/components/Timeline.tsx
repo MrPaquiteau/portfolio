@@ -1,25 +1,21 @@
-import React, { useState } from "react"; // Import useState
+import React, { useState } from "react";
 import '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBriefcase, faGraduationCap, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { faBriefcase, faGraduationCap, faChevronDown, faFilePdf } from '@fortawesome/free-solid-svg-icons';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import '../assets/styles/Timeline.scss'
 
 function Timeline() {
-  // State to track open elements. Key is index, value is boolean (true=open)
   const [openStates, setOpenStates] = useState<{ [key: number]: boolean }>({});
 
-  // Function to toggle the state for a given index
   const toggleDetails = (index: number) => {
     setOpenStates(prev => ({
-      ...prev, // Keep other states
-      [index]: !prev[index] // Toggle the clicked one
+      ...prev,
+      [index]: !prev[index]
     }));
   };
 
-  // Define timeline items data (optional, but good practice for mapping)
-  // You can keep your existing structure if preferred, just ensure unique indices (0, 1, 2, 3)
   const timelineItems = [
     {
       index: 0,
@@ -41,7 +37,11 @@ function Timeline() {
       company: "SKIS Rossignol",
       title: "Database Manager (Internship)",
       location: "Saint-Jean-de-Moirans, France",
-      details: `BUT 2nd year Internship<br /><br />- Data Management<br />- SQL Queries<br />- Python Scripting for Optimization<br />- Developed an Excel tool using VBA for automation`
+      details: `BUT 2nd year Internship<br /><br />- Data Management<br />- SQL Queries<br />- Python Scripting for Optimization<br />- Developed an Excel tool using VBA for automation`,
+      report: {
+        url: "/documents/Internship_Rossignol_Report_French.pdf",
+        label: "Internship Report"
+      }
     },
     {
       index: 2,
@@ -67,7 +67,6 @@ function Timeline() {
     }
   ];
 
-
   return (
     <div id="timeline">
       <div className="items-container">
@@ -81,19 +80,26 @@ function Timeline() {
               iconStyle={{ background: item.iconBg, color: 'white' }}
               icon={<FontAwesomeIcon icon={item.icon} />}
             >
-              {/* Wrapper div with onClick handler */}
               <div className="timeline-content-wrapper" onClick={() => toggleDetails(item.index)}>
-                {/* Static Content (Always Visible) */}
                 <h4 className="vertical-timeline-element-subtitle">{item.company}</h4>
                 <h3 className="vertical-timeline-element-title">{item.title}</h3>
                 <h5 className="vertical-timeline-element-subtitle">{item.location}</h5>
-
-                {/* Expandable Content Area */}
                 <div className="timeline-details">
-                  <p dangerouslySetInnerHTML={{ __html: item.details }} />
-                </div>
-                
-                {/* Expansion Arrow */}
+                <p dangerouslySetInnerHTML={{ __html: item.details }} />
+                {item.report && (
+                  <a
+                    href={item.report.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="pdf-download-link"
+                    onClick={e => e.stopPropagation()}
+                    style={{ display: item.report ? undefined : "none" }}
+                  >
+                    <FontAwesomeIcon icon={faFilePdf} size="lg" />
+                    {item.report.label}
+                  </a>
+                )}
+              </div>
                 <div className="expand-arrow">
                   <FontAwesomeIcon icon={faChevronDown} />
                 </div>

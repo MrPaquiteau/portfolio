@@ -17,7 +17,7 @@ function Expertise() {
                     icon={faPython}
                     title="Backend Development"
                     description="Developed Python programs for web scraping, PDF data extraction, and data manipulation using libraries like Pandas and Selenium. Experience with object storage systems like Minio." // Updated description
-                    labels={["Python", "Pandas", "FastAPI", "Web Scraping (Selenium)", "PDF Scraping", "Minio"]}
+                    labels={["Python", "Pandas", "Polars", "Object-Oriented Programming", "FastAPI", "Web Scraping (Selenium/Bs4)", "PDF Scraping", "Minio"]}
                 />
                 {/* Card 2: Frontend Development */}
                 <SkillCard
