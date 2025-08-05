@@ -26,7 +26,11 @@ function Timeline() {
       company: "Arexa",
       title: "Data Analyst (Work-study)",
       location: "Meylan, France",
-      details: `BUT 3rd year Work-study<br /><br />- Data Analysis and Visualization (Power BI)<br />- Python Scripting for Data Processing<br />- React Development & FastAPI for Web Applications`
+      details: `BUT 3rd year Work-study<br /><br />- Data Analysis and Visualization (Power BI)<br />- Python Scripting for Data Processing<br />- React Development & FastAPI for Web Applications`,
+      report: {
+        url: "/documents/Workstudy_Arexa_Report_French.pdf",
+        label: "Work-study Report"
+      }
     },
     {
       index: 1,
