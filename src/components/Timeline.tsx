@@ -5,8 +5,12 @@ import { faBriefcase, faGraduationCap, faChevronDown, faFilePdf } from '@fortawe
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import '../assets/styles/Timeline.scss'
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../translations/translations';
 
 function Timeline() {
+  const { language } = useLanguage();
+  const t = translations[language];
   const [openStates, setOpenStates] = useState<{ [key: number]: boolean }>({});
 
   const toggleDetails = (index: number) => {
@@ -20,61 +24,61 @@ function Timeline() {
     {
       index: 0,
       type: 'work',
-      date: "September 2024 - July 2025",
+      date: t.timeline.items[0].date,
       icon: faBriefcase,
       iconBg: '#5000ca',
-      company: "Arexa",
-      title: "Data Analyst (Work-study)",
-      location: "Meylan, France",
-      details: `BUT 3rd year Work-study<br /><br />- Data Analysis and Visualization (Power BI)<br />- Python Scripting for Data Processing<br />- React Development & FastAPI for Web Applications`,
+      company: t.timeline.items[0].company,
+      title: t.timeline.items[0].title,
+      location: t.timeline.items[0].location,
+      details: t.timeline.items[0].details,
       report: {
         url: "/documents/Workstudy_Arexa_Report_French.pdf",
-        label: "Work-study Report"
+        label: t.timeline.items[0].reportLabel
       }
     },
     {
       index: 1,
       type: 'work',
-      date: "April 2024 - June 2024",
+      date: t.timeline.items[1].date,
       icon: faBriefcase,
       iconBg: '#5000ca',
-      company: "SKIS Rossignol",
-      title: "Database Manager (Internship)",
-      location: "Saint-Jean-de-Moirans, France",
-      details: `BUT 2nd year Internship<br /><br />- Data Management<br />- SQL Queries<br />- Python Scripting for Optimization<br />- Developed an Excel tool using VBA for automation`,
+      company: t.timeline.items[1].company,
+      title: t.timeline.items[1].title,
+      location: t.timeline.items[1].location,
+      details: t.timeline.items[1].details,
       report: {
         url: "/documents/Internship_Rossignol_Report_French.pdf",
-        label: "Internship Report"
+        label: t.timeline.items[1].reportLabel
       }
     },
     {
       index: 2,
       type: 'education',
-      date: "2022 - Present",
+      date: t.timeline.items[2].date,
       icon: faGraduationCap,
       iconBg: '#007bff',
-      company: "IUT2 - Université Grenoble Alpes",
-      title: "University Bachelor of Technology (BUT) Data Science",
-      location: "Grenoble, France",
-      details: `- Data Science and Computer Science<br />- Programming in Python, SQL, R<br />- Machine Learning and AI<br />- Database Management<br />- Data Analysis and Visualization<br />- Web Development with JavaScript, HTML, CSS, PHP<br />- Big Data Technologies<br />- Project Management and Team Collaboration<br />`
+      company: t.timeline.items[2].company,
+      title: t.timeline.items[2].title,
+      location: t.timeline.items[2].location,
+      details: t.timeline.items[2].details
     },
     {
       index: 3,
       type: 'education',
-      date: "2019 - 2022",
+      date: t.timeline.items[3].date,
       icon: faGraduationCap,
       iconBg: '#007bff',
-      company: "Lycée Marie Curie",
-      title: "French Baccalauréat",
-      location: "Échirolles, France",
-      details: `Specialities<br /><br />- Numeric and Computer Science<br />- Mathematics<br />- Economy and Social Sciences`
+      company: t.timeline.items[3].company,
+      title: t.timeline.items[3].title,
+      location: t.timeline.items[3].location,
+      details: t.timeline.items[3].details
     }
   ];
 
   return (
     <div id="timeline">
       <div className="items-container">
-        <h1>Timeline</h1>
+        <h1>{t.timeline.title}</h1>
         <VerticalTimeline>
           {timelineItems.map((item) => (
             <VerticalTimelineElement

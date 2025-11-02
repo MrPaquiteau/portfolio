@@ -4,55 +4,60 @@ import { faReact, faDocker, faPython } from '@fortawesome/free-brands-svg-icons'
 import { faDatabase, faBrain, faMobileAlt } from '@fortawesome/free-solid-svg-icons';
 import '../assets/styles/Expertise.scss';
 import SkillCard from './SkillCard';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../translations/translations';
 
 
 function Expertise() {
+    const { language } = useLanguage();
+    const t = translations[language];
+
     return (
     <div className="container" id="expertise">
         <div className="skills-container">
-            <h1>Expertise</h1>
+            <h1>{t.expertise.title}</h1>
             <div className="skills-grid">
                 {/* Card 1: Backend Development */}
                 <SkillCard
                     icon={faPython}
-                    title="Backend Development"
-                    description="Developed Python programs for web scraping, PDF data extraction, and data manipulation using libraries like Pandas and Selenium. Experience with object storage systems like Minio." // Updated description
-                    labels={["Python", "Pandas", "Polars", "Object-Oriented Programming", "FastAPI", "Web Scraping (Selenium/Bs4)", "PDF Scraping", "Minio"]}
+                    title={t.expertise.backend.title}
+                    description={t.expertise.backend.description}
+                    labels={t.expertise.backend.labels}
                 />
                 {/* Card 2: Frontend Development */}
                 <SkillCard
                     icon={faReact}
-                    title="Frontend Development"
-                    description="Built a React application to enable collaborators in enterprise/production environments to execute Python programs efficiently. Proficient in creating responsive user interfaces with JavaScript, HTML, and CSS." // Updated description
-                    labels={["React", "JavaScript", "HTML5", "CSS3"]}
+                    title={t.expertise.frontend.title}
+                    description={t.expertise.frontend.description}
+                    labels={t.expertise.frontend.labels}
                 />
                 {/* Card 3: DevOps */}
                 <SkillCard
                     icon={faDocker}
-                    title="DevOps & Containerization"
-                    description="I have experience with Git and GitHub for project management, version control, and collaboration in software development. Additionally, I am proficient in using Docker for containerization, enabling efficient deployment and scalability of applications."
-                    labels={["Git", "GitHub", "Docker"]}
+                    title={t.expertise.devops.title}
+                    description={t.expertise.devops.description}
+                    labels={t.expertise.devops.labels}
                 />
                 {/* Card 4: Database & SQL */}
                 <SkillCard
                     icon={faDatabase}
-                    title="Database & SQL"
-                    description="Proficient in designing and managing relational and NoSQL databases. Experience with SQL query optimization and data modeling using MySQL, PostgreSQL, and MongoDB."
-                    labels={["SQL", "MySQL", "PostgreSQL", "MongoDB", "Neo4j"]}
+                    title={t.expertise.database.title}
+                    description={t.expertise.database.description}
+                    labels={t.expertise.database.labels}
                 />
                 {/* Card 5: Machine Learning */}
                 <SkillCard
                     icon={faBrain}
-                    title="Machine Learning"
-                    description="Experience in developing and implementing machine learning models for classification tasks, utilizing neural networks, and leveraging libraries like Scikit-learn, TensorFlow, and PyTorch. Familiar with GPU-accelerated data science using the RAPIDS suite (cuDF)." // Updated description
-                    labels={["Classification", "Neural Networks", "Scikit-learn", "TensorFlow", "PyTorch", "RAPIDS", "cuDF"]}
+                    title={t.expertise.ml.title}
+                    description={t.expertise.ml.description}
+                    labels={t.expertise.ml.labels}
                 />
                 {/* Card 6: Mobile Development */}
                 <SkillCard
                     icon={faMobileAlt}
-                    title="Mobile Development"
-                    description="Created small iOS applications using Swift & SwiftUI to display scraped datas"
-                    labels={["Swift", "SwiftUI"]}
+                    title={t.expertise.mobile.title}
+                    description={t.expertise.mobile.description}
+                    labels={t.expertise.mobile.labels}
                 />
             </div>
         </div>
