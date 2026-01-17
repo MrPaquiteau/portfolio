@@ -24,6 +24,8 @@
   cursor: pointer;
   height: 100%;
   width: 100%;
+  position: relative;
+  transition: transform 0.3s ease;
 }
 
 // -------------------------------------------------
@@ -33,9 +35,25 @@
 // Clickable timeline elements
 .vertical-timeline-element {
   
-  // Content styling
+  // Content styling - Modern card design (optimized)
   .vertical-timeline-element-content {
     border-radius: 20px !important;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fb 100%) !important;
+    border: 1px solid #e5e7eb !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+    transition: box-shadow 0.3s ease;
+    position: relative;
+    
+    // Colored top border (using border-top instead of ::before)
+    border-top: 4px solid transparent !important;
+    
+    &:hover {
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15) !important;
+      
+      .timeline-content-wrapper {
+        transform: scale(1.015);
+      }
+    }
     
     h3, h4, h5 {
       margin: 0;
@@ -43,70 +61,82 @@
     }
     
     .vertical-timeline-element-title {
-      font-size: 1.2em;
-      color: rgb(39, 40, 34);
-      margin-bottom: 0.25em;
+      font-size: 1.25em;
+      font-weight: 700;
+      color: rgb(30, 32, 35);
+      margin-bottom: 0.3em;
+      letter-spacing: -0.02em;
     }
     
     .vertical-timeline-element-subtitle {
       font-size: 0.9em;
-      color: #666;
+      color: #5a5d63;
       margin-bottom: 0.25em;
       
       &:first-of-type {
-        font-weight: bold;
-        color: rgb(39, 40, 34);
+        font-weight: 600;
+        color: rgb(45, 48, 52);
+        font-size: 0.95em;
       }
       
       &:last-of-type {
         font-style: italic;
         margin-bottom: 0;
+        color: #6b7280;
+        font-size: 0.85em;
       }
+    }
+    
+    // Hide default arrow
+    .vertical-timeline-element-content-arrow {
+      border-right-color: rgba(255, 255, 255, 0.95) !important;
     }
   }
   
-  // Expandable details container
+  // Expandable details container (optimized)
   .timeline-details {
     max-height: 0;
     overflow: hidden;
-    padding: 0 1.5em;
-    margin-top: 0;
-    transition: max-height 0.5s ease-in-out, 
-                padding 0.5s ease-in-out, 
-                margin-top 0.5s ease-in-out;
+    padding: 0;
+    margin: 0;
+    transition: max-height 0.35s ease, padding 0.35s ease, margin 0.35s ease;
     box-sizing: border-box;
     
     p {
       margin: 0;
       font-size: 0.95em;
-      line-height: 1.4;
-      color: #000000;
+      line-height: 1.6;
+      color: #374151;
+      padding: 1em 1.2em;
+      background: #f3f4f6;
+      border-radius: 12px;
+      border-left: 3px solid #5000ca;
     }
   }
   
-  // Expand indicator arrow
+  // Expand indicator arrow (optimized)
   .expand-arrow {
     position: absolute;
-    bottom: 10px;
-    right: 10px;
-    transition: transform 0.3s ease;
-    color: #555;
-    font-size: 1rem;
-    width: 24px;
-    height: 24px;
+    bottom: -6px;
+    right: -6px;
+    transition: transform 0.25s ease;
+    color: white;
+    font-size: 0.8rem;
+    width: 28px;
+    height: 28px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.75);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   }
   
   // Open state styles
   &.is-open {
     .timeline-details {
       max-height: 500px;
-      padding: 1em 1.5em 1.5em;
-      margin-top: 1em;
+      padding: 1em 0 0 0;
+      margin-top: 0.8em;
     }
     
     .expand-arrow {
@@ -116,33 +146,98 @@
 }
 
 // -------------------------------------------------
-// EVENT TYPE SPECIFIC STYLES
+// EVENT TYPE SPECIFIC STYLES (optimized)
 // -------------------------------------------------
 
-// Work experience arrow style
-.vertical-timeline-element--work .expand-arrow {
-  background-color: #5000ca;
+// Work experience styles
+.vertical-timeline-element--work {
+  .vertical-timeline-element-content:hover {
+    border-top-color: #5000ca !important;
+  }
+  
+  .expand-arrow {
+    background: #5000ca;
+  }
+  
+  .timeline-details p {
+    background: rgba(80, 0, 202, 0.06);
+    border-left-color: #5000ca;
+  }
 }
 
-// Education arrow style
-.vertical-timeline-element--education .expand-arrow {
-  background-color: #007bff;
+// Education styles
+.vertical-timeline-element--education {
+  .vertical-timeline-element-content:hover {
+    border-top-color: #007bff !important;
+  }
+  
+  .expand-arrow {
+    background: #007bff;
+  }
+  
+  .timeline-details p {
+    background: rgba(0, 123, 255, 0.06);
+    border-left-color: #007bff;
+  }
+}
+
+// Dark mode adjustments for timeline details
+.dark-mode {
+  .vertical-timeline-element--work .timeline-details p {
+    background: rgba(139, 92, 246, 0.15);
+    border-left-color: #a78bfa;
+  }
+  
+  .vertical-timeline-element--education .timeline-details p {
+    background: rgba(96, 165, 250, 0.15);
+    border-left-color: #60a5fa;
+  }
+}
+
+// Light mode adjustments
+.light-mode {
+  // Icon circle border in light mode
+  .vertical-timeline-element-icon {
+    box-shadow: 0 0 0 4px #1a1a2e, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05) !important;
+  }
+  
+  // Brighter timeline details backgrounds
+  .vertical-timeline-element--work .timeline-details p {
+    background: rgba(139, 92, 246, 0.12);
+    border-left-color: #7c3aed;
+  }
+  
+  .vertical-timeline-element--education .timeline-details p {
+    background: rgba(96, 165, 250, 0.12);
+    border-left-color: #3b82f6;
+  }
 }
 
 // -------------------------------------------------
-// PDF LINK STYLE (ICON + TEXT IN RED)
+// PDF LINK STYLE (optimized)
 // -------------------------------------------------
 .pdf-download-link {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  margin-top: 10px;
-  gap: 8px;
-  color: #d32f2f !important;
+  margin-top: 1em;
+  gap: 10px;
+  color: white !important;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 0.9em;
+  padding: 0.7em 1.2em;
+  background: #dc2626;
+  border-radius: 10px;
+  transition: background 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 2px 8px rgba(220, 38, 38, 0.25);
 
   .svg-inline--fa {
-    color: #d32f2f !important;
+    color: white !important;
+  }
+  
+  &:hover {
+    transform: translateY(-2px);
+    background: #b91c1c;
   }
 }
 

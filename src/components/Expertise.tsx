@@ -17,40 +17,40 @@ function Expertise() {
         <div className="skills-container">
             <h1>{t.expertise.title}</h1>
             <div className="skills-grid">
-                {/* Card 1: Backend Development */}
-                <SkillCard
-                    icon={faPython}
-                    title={t.expertise.backend.title}
-                    description={t.expertise.backend.description}
-                    labels={t.expertise.backend.labels}
-                />
-                {/* Card 2: Frontend Development */}
+                {/* Card 1: Frontend Development */}
                 <SkillCard
                     icon={faReact}
                     title={t.expertise.frontend.title}
                     description={t.expertise.frontend.description}
                     labels={t.expertise.frontend.labels}
                 />
-                {/* Card 3: DevOps */}
+                {/* Card 2: Machine Learning */}
+                <SkillCard
+                    icon={faBrain}
+                    title={t.expertise.ml.title}
+                    description={t.expertise.ml.description}
+                    labels={t.expertise.ml.labels}
+                />
+                {/* Card 3: Backend Development */}
+                <SkillCard
+                    icon={faPython}
+                    title={t.expertise.backend.title}
+                    description={t.expertise.backend.description}
+                    labels={t.expertise.backend.labels}
+                />
+                {/* Card 4: DevOps */}
                 <SkillCard
                     icon={faDocker}
                     title={t.expertise.devops.title}
                     description={t.expertise.devops.description}
                     labels={t.expertise.devops.labels}
                 />
-                {/* Card 4: Database & SQL */}
+                {/* Card 5: Database & SQL */}
                 <SkillCard
                     icon={faDatabase}
                     title={t.expertise.database.title}
                     description={t.expertise.database.description}
                     labels={t.expertise.database.labels}
-                />
-                {/* Card 5: Machine Learning */}
-                <SkillCard
-                    icon={faBrain}
-                    title={t.expertise.ml.title}
-                    description={t.expertise.ml.description}
-                    labels={t.expertise.ml.labels}
                 />
                 {/* Card 6: Mobile Development */}
                 <SkillCard

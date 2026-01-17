@@ -9,7 +9,7 @@ export const translations = {
     // Main section
     main: {
       title: 'TROILLARD Romain',
-      subtitle: 'Data Science student (BSc)',
+      subtitle: 'Master\'s Student in Computer Science (AI)',
     },
     // Expertise section
     expertise: {
@@ -41,7 +41,7 @@ export const translations = {
       },
       mobile: {
         title: 'Mobile Development',
-        description: 'Created small iOS applications using Swift & SwiftUI to display scraped datas',
+        description: 'Created small iOS application using Swift & SwiftUI to display scraped datas',
         labels: ['Swift', 'SwiftUI'],
       },
     },
@@ -49,6 +49,13 @@ export const translations = {
     timeline: {
       title: 'Timeline',
       items: [
+        {
+          date: '2025 - Present',
+          company: 'Université du Québec à Chicoutimi (UQAC)',
+          title: 'Master in Computer Science (Artificial Intelligence)',
+          location: 'Saguenay, Quebec, Canada',
+          details: 'Master\'s degree with specialization in AI<br /><br />- Machine Learning & Deep Learning<br />- Computer Vision and Image Processing<br />- Advanced Algorithms, Optimization and Metaheuristics<br />- Tools: Python, PyTorch, TensorFlow, Scikit-learn',
+        },
         {
           date: 'September 2024 - July 2025',
           company: 'Arexa',
@@ -66,7 +73,7 @@ export const translations = {
           reportLabel: 'Internship Report',
         },
         {
-          date: '2022 - Present',
+          date: '2022 - 2025',
           company: 'IUT2 - Université Grenoble Alpes',
           title: 'University Bachelor of Technology (BUT) Data Science',
           location: 'Grenoble, France',
@@ -105,6 +112,7 @@ export const translations = {
       template: "Yuji Sato's template",
     },
   },
+  // -----------------------------------------------------------------------------------------------------------------------------------------------------
   fr: {
     // Navigation
     nav: {
@@ -115,7 +123,7 @@ export const translations = {
     // Main section
     main: {
       title: 'TROILLARD Romain',
-      subtitle: 'Étudiant en Data Science (BUT)',
+      subtitle: 'Étudiant en Maîtrise Informatique (IA)',
     },
     // Expertise section
     expertise: {
@@ -147,7 +155,7 @@ export const translations = {
       },
       mobile: {
         title: 'Développement Mobile',
-        description: 'Création de petites applications iOS utilisant Swift & SwiftUI pour afficher des données scrapées',
+        description: 'Création de petites application iOS utilisant Swift & SwiftUI pour afficher des données scrapées',
         labels: ['Swift', 'SwiftUI'],
       },
     },
@@ -155,6 +163,12 @@ export const translations = {
     timeline: {
       title: 'Parcours',
       items: [
+        {
+          date: '2025 - Aujourd\'hui',
+          company: 'Université du Québec à Chicoutimi (UQAC)',
+          title: 'Maîtrise en Informatique (Intelligence Artificielle)',
+          location: 'Saguenay, Québec, Canada',
+          details: 'Maîtrise avec spécialisation en IA<br /><br />- Machine Learning & Deep Learning<br />- Vision par Ordinateur et Traitement d\'Images<br />- Algorithmes Avancés, Optimisation et Métaheuristiques<br />- Outils : Python, PyTorch, TensorFlow, Scikit-learn',        },
         {
           date: 'Septembre 2024 - Juillet 2025',
           company: 'Arexa',
@@ -172,7 +186,7 @@ export const translations = {
           reportLabel: 'Rapport de Stage',
         },
         {
-          date: '2022 - Aujourd\'hui',
+          date: '2022 - 2025',
           company: 'IUT2 - Université Grenoble Alpes',
           title: 'BUT (Bachelor Universitaire de Technologie) Science des Données',
           location: 'Grenoble, France',

@@ -23,18 +23,14 @@ function Timeline() {
   const timelineItems = [
     {
       index: 0,
-      type: 'work',
+      type: 'education',
       date: t.timeline.items[0].date,
-      icon: faBriefcase,
-      iconBg: '#5000ca',
+      icon: faGraduationCap,
+      iconBg: '#007bff',
       company: t.timeline.items[0].company,
       title: t.timeline.items[0].title,
       location: t.timeline.items[0].location,
       details: t.timeline.items[0].details,
-      report: {
-        url: "/documents/Workstudy_Arexa_Report_French.pdf",
-        label: t.timeline.items[0].reportLabel
-      }
     },
     {
       index: 1,
@@ -47,20 +43,24 @@ function Timeline() {
       location: t.timeline.items[1].location,
       details: t.timeline.items[1].details,
       report: {
-        url: "/documents/Internship_Rossignol_Report_French.pdf",
+        url: "/documents/Workstudy_Arexa_Report_French.pdf",
         label: t.timeline.items[1].reportLabel
       }
     },
     {
       index: 2,
-      type: 'education',
+      type: 'work',
       date: t.timeline.items[2].date,
-      icon: faGraduationCap,
-      iconBg: '#007bff',
+      icon: faBriefcase,
+      iconBg: '#5000ca',
       company: t.timeline.items[2].company,
       title: t.timeline.items[2].title,
       location: t.timeline.items[2].location,
-      details: t.timeline.items[2].details
+      details: t.timeline.items[2].details,
+      report: {
+        url: "/documents/Internship_Rossignol_Report_French.pdf",
+        label: t.timeline.items[2].reportLabel
+      }
     },
     {
       index: 3,
@@ -72,6 +72,17 @@ function Timeline() {
       title: t.timeline.items[3].title,
       location: t.timeline.items[3].location,
       details: t.timeline.items[3].details
+    },
+    {
+      index: 4,
+      type: 'education',
+      date: t.timeline.items[4].date,
+      icon: faGraduationCap,
+      iconBg: '#007bff',
+      company: t.timeline.items[4].company,
+      title: t.timeline.items[4].title,
+      location: t.timeline.items[4].location,
+      details: t.timeline.items[4].details
     }
   ];
 
